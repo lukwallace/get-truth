@@ -11,8 +11,8 @@ app.use(function(req, res, next) {
 const SERVER_DELAY = 5000;
 app.get('/get-truth', (req, res) => {
     const randomTruth = truths[Math.floor(Math.random() * truths.length)];
-    const randomDelay = Math.random() * 5000;
-    const failure = Math.random() < 0.3;
+    const randomDelay = Math.random() * SERVER_DELAY;
+    const failure = Math.random() < 0.33;
 
     setTimeout(() => {
         if (failure) {
