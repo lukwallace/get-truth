@@ -1,3 +1,25 @@
-button {
 
+#wipe {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    border: solid 0px green;
+    border-top: 0px solid transparent;
+    border-left: 0px solid transparent;
+    transition: border 2s;
+}
+
+#wipe.enlarge {
+    border: solid green;
+    border-top: 100vh solid transparent;
+    border-left: 100vw solid transparent;
+    border-right: 100vw solid green;
+    border-bottom: 100vh solid green;
+}
+
+#button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
