@@ -3,23 +3,59 @@
     position: absolute;
     bottom: 0;
     right: 0;
-    border: solid 0px green;
+    border: solid 0px #273A4f;
     border-top: 0px solid transparent;
     border-left: 0px solid transparent;
     transition: border 2s;
 }
 
 #wipe.enlarge {
-    border: solid green;
+    border: solid #273A4f;
     border-top: 100vh solid transparent;
     border-left: 100vw solid transparent;
-    border-right: 100vw solid green;
-    border-bottom: 100vh solid green;
+    border-right: 100vw solid #273A4f;
+    border-bottom: 100vh solid #273A4f;
+}
+
+#wipe.clear {
+    border: solid transparent;
+    border-top: 100vh solid transparent;
+    border-left: 100vw solid transparent;
+    border-right: 100vw solid transparent;
+    border-bottom: 100vh solid transparent;
+}
+#wipe.reset {
+    border: solid transparent;
+    border-top: 0 solid transparent;
+    border-left: 0 solid transparent;
+    border-right: 0 solid transparent;
+    border-bottom: 0 solid transparent;
 }
 
 #button {
+    appearance: none;
+    -moz-appearance: none;
+    -ms-progress-appearance: none;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    font-size: 1rem;
+    background-color: #273A4f;
+    border: none;
+    height: 3rem;
+    padding: 1rem 2rem;
+    border-radius: 7px;
+    box-shadow: inset 0 -5px #eb5957;
+    transition: all .2s;
+    color: white;
+}
+#button:hover {
+    cursor: pointer;
+    background-color: #eb5957;
+    box-shadow: inset 0 -5px #273A4f;
+}
+#button.no-events {
+    pointer-events: none;
+    background-color: gray;
 }
